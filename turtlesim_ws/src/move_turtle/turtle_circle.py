@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# author : Sumanth Nethi
+# author : Akash
 import rospy
 from geometry_msgs.msg import Twist
 import sys
@@ -9,8 +9,11 @@ def turtle_circle(radius):
     rospy.init_node('turtlesim', anonymous=True)
     pub = rospy.Publisher('/turtle1/cmd_vel',
                         Twist, queue_size=10)
+
     rate = rospy.Rate(10)
+
     vel = Twist()
+
     while not rospy.is_shutdown():
         vel.linear.x = radius
         vel.linear.y = 0
@@ -21,6 +24,7 @@ def turtle_circle(radius):
         rospy.loginfo("Radius = %f",
                     radius)
         pub.publish(vel)
+        
         rate.sleep()
 
 
