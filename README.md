@@ -4,8 +4,9 @@ TURTLESIM BY GOOLJAR AKASH
 
 
 Make a git clone of the repository.
-sh
-git clone
+```sh
+git clone https://github.com/akgooljar0709/ros_turtlesim.git
+```
 
 ### Part 1
 To run the turtlesim_node, turtle_teleop_key and rqt graph, we use the following command respectively:
@@ -29,13 +30,13 @@ roscore
 ### Part 3
 ```sh
 1. roscore
-2. rosrun move_turtle turtle_circle.py 2 2 0.2
+2. rosrun move_turtle turtle_circle.py 3 2 0.2
 ```
 
 ### Part 4
 ```sh
 1. roscore
-2. rosservice call /spawn 2 2 0.2 'newturtle'
+2. rosservice call /spawn 2 2 0.2 'newturtlesim'
 3. rqt_graph
 4. roslaunch move_turtle turtle.launch
 ```
